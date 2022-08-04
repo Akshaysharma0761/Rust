@@ -1,8 +1,3 @@
-// use rand::random;
-// fn main(){
-//    let number= random::<u64>();
-//    println!("Random is {}",number);
-// }
 
 //guessing game
 use rand::{thread_rng,Rng};
@@ -21,7 +16,7 @@ fn main(){
     let guess:u32=guess.trim().parse().expect("type a integer");//converting to integer
     // println!("{}",guess+1);
  
-
+//compare guess and secret_number we use match
     match guess.cmp(&secret_number){
         Ordering::Less=>println!("to small"),
         Ordering::Greater=>println!("to large"),
